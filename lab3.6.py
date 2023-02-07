@@ -1,10 +1,9 @@
-N = int(input().strip())
-sum_of_cards = (N * (N + 1)) // 2
-sum_of_found_cards = 0
+def find_lost_card(n, cards):
+    expected_sum = n * (n + 1) // 2
+    actual_sum = sum(cards)
+    return expected_sum - actual_sum
 
-for i in range(N - 1):
-    found_card = int(input().strip())
-    sum_of_found_cards += found_card
-
-lost_card = sum_of_cards - sum_of_found_cards
-print(lost_card)
+print("N: ")
+n = int(input())
+cards = [int(input()) for i in range(n - 1)]
+print(find_lost_card(n, cards))
