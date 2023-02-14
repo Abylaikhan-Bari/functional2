@@ -1,11 +1,15 @@
+'Строковый метод isdigit() проверяет, состоит ли строка только из цифр. Напишите программу,\
+которая запрашивает с ввода два целых числа и выводит их сумму. В случае некорректного ввода программа не должна завершаться с ошибкой, \
+а должна продолжать запрашивать числа. Обработчик исключений try-except использовать нельзя.'
+
 while True:
-    a = input("Enter the first number: ")
-    b = input("Enter the second number: ")
+    a = input("1-san: ")
+    b = input("2-san: ")
 
     if a.isdigit() and b.isdigit():
         a = int(a)
         b = int(b)
-        print("The sum is:", a + b)
+        print("Summasy:", a + b)
         break
     else:
-        print("Invalid input, try again.")
+        print("Qate, qaitadan koriniz.")

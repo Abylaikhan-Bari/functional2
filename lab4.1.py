@@ -1,13 +1,16 @@
+'Напишите программу, в которой предлагается вводить учащихся различных груп, посещающих секции по программированию. \
+Требуется упорядочить список по возрастанию классов. Распечатать список фамилий и классов'
+
 students = []
 
 while True:
-    student = input("Введите ФИО ученика (для завершения ввода введите 'q'): ")
+    student = input("Aty joni (aiaqtau ushin 'q'): ")
     if student == 'q':
         break
-    grade = input("Введите класс ученика: ")
+    grade = input("Synyp: ")
     students.append((student, int(grade)))
 
-students.sort(key=lambda x: x[1])
+students.sort(key=lambda x: x[0])
 
 for student, grade in students:
-    print(f"{student}, {grade} класс")
+    print(f"{student}, {grade} synyp")
