@@ -1,12 +1,15 @@
-# Program to demonstrate various functions and methods for strings in Python
+'Минимум 10 жолдарға арналған функциялар мен әдістерді қолданып бағларлама жазып шық.'
 
+def length(string):
+  #Tanba sanyn tabu
+  return len(string)
 def reverse_string(string):
-  # Reverses the order of characters in a string
+  # Berilgen joldy kerisinshe shygarady
   return string[::-1]
 
 def count_vowels(string):
-  # Counts the number of vowels in a string
-  vowels = "aeiouAEIOU"
+  # Berilgen joldagy dauysty dybystardy sanaidy
+  vowels = "aeiouywAEIOUYW"
   count = 0
   for char in string:
     if char in vowels:
@@ -14,52 +17,52 @@ def count_vowels(string):
   return count
 
 def upper_case(string):
-  # Converts all characters in a string to uppercase
+  # Joldagy barlyq z=simvoldardy jogargy registrge auystyrady
   return string.upper()
 
 def lower_case(string):
-  # Converts all characters in a string to lowercase
+  # Joldagy barlyq z=simvoldardy tomengi registrge auystyrady
   return string.lower()
 
 def capitalize(string):
-  # Capitalizes the first character of a string
+  # berilgen joldagy birinshi simvoldy jogargy registrge auystyrady
   return string.capitalize()
 
-def find_substring(string, sub_string):
-  # Returns the index of the first occurrence of a substring in a string
-  return string.find(sub_string)
-
 def replace_substring(string, old, new):
-  # Replaces all occurrences of a substring in a string with a new substring
+  # Joldagy bir sozdi auystyru
   return string.replace(old, new)
 
-def split_string(string, separator):
-  # Splits a string into a list of substrings based on a separator
-  return string.split(separator)
+def split_string(string, separator1):
+  # Berilgen joldyn sozderin bolek-bolek shygaru
+  return string.split(separator1)
 
-def join_strings(strings, separator):
-  # Joins a list of strings into a single string using a separator
-  return separator.join(strings)
+def join_strings(strings, separator2):
+  # Joldar tizimin qosyp shygarady
+  return separator2.join(strings)
 
-def strip_whitespace(string):
-  # Removes leading and trailing whitespace from a string
-  return string.strip()
+def upper(string):
+# Jogargy registrge tekseru
+ return str.isupper(string)
 
-# Testing the functions
-string = "Hello, World!"
-sub_string = "World"
-old = "World"
-new = "Friend"
-separator = " "
-strings = ["Hello,", "World!"]
 
-print("Reverse of the string:", reverse_string(string))
-print("Number of vowels in the string:", count_vowels(string))
-print("Uppercase of the string:", upper_case(string))
-print("Lowercase of the string:", lower_case(string))
-print("Capitalized string:", capitalize(string))
-print("Index of the substring:", find_substring(string, sub_string))
-print("String after replacing substring:", replace_substring(string, old, new))
-print("Split string:", split_string(string, separator))
-print("Join strings:", join_strings(strings, separator))
-print("String after stripping whitespace:", strip_whitespace(string))
+
+string = input("Sozdi engiziniz: ")
+old = input("Myna sozdi: ")
+new = input("Mynagan auystyru: ")
+separator1 = " "
+separator2 = ""
+strings = [input('Birinshi jol: '), input("Ekinshi jol: ")]
+
+print("\n\n1) Dauysty tanbalar: ", count_vowels(string))
+print("\n2) Joldyn kerisinshe turi: ", reverse_string(string))
+print("\n3) Jogargy registrde: ", upper_case(string))
+print("\n4) Tomengi registrde: ", lower_case(string))
+print("\n5) Bas aripten bastalgan jol: ", capitalize(string))
+print("\n6) Joldyn sozin auystyru: ", replace_substring(string, old, new))
+print("\n7) Bolek sozder: ", split_string(string, separator1))
+print("\n8) Joldar tizimin qosu: ", join_strings(strings, separator2))
+print("\n9) Jol jogargy registrde me:", upper(string))
+print("\n10) Joldagy tanbalar sany: ", length(string))
+
+
+
