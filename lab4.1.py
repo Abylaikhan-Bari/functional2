@@ -10,7 +10,7 @@ while True:
     grade = input("Synyp: ")
     students.append((student, int(grade)))
 
-students.sort(key=lambda x: x[0])
+students.sort(key=lambda x: x[1])
 
 for student, grade in students:
     print(f"{student}, {grade} synyp")
