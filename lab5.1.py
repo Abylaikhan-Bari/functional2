@@ -28,3 +28,4 @@ for group, students_in_group in groupby(students, key=lambda x: x['group']):
     print(f'Top {group}:')
     for student in students_in_group:
         print(f'\t{student["name"]}, {student["subject"]}, qatysady')
+

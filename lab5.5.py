@@ -13,15 +13,43 @@
 
 import random
 
-my_bilet = int(input("Menin biletim: "))
+my_bilet = input("Menin biletim: ")
 # 1 men 49 arasynda 6 erekshe san jasaimyz
-numbers = random.sample(range(1, 50), 6)
+numbers = random.sample(range(1, 10), 6)
 
 # Osu retimen suryptau
 numbers.sort()
-if my_bilet == numbers.sort():
-    print(my_bilet, "Siz jendiniz!!!")
-else:
-    print(my_bilet, "Okinishke orai siz jenbediniz")
+
+for san in range(numbers[]):
+    if my_bilet == numbers:
+        print(my_bilet, "Siz jendiniz!!!")
+    else:
+        print(my_bilet, "Okinishke orai siz jenbediniz")
 # Natizheni shygaru
 print("Bilet nomeri:", numbers)
+
+#import random
+
+# # Генерируем список из 6 случайных неповторяющихся чисел от 1 до 49
+# numbers = random.sample(range(1, 50), 6)
+#
+# # Сортируем список по возрастанию
+# numbers.sort()
+#
+# # Выводим номера на экран
+# print("Номера вашего билета:", numbers)
+#
+# # Просим пользователя ввести номера своего билета
+# user_numbers = input("Введите номера своего билета через пробел: ")
+#
+# # Разбиваем введенные пользователем номера на список и приводим каждый элемент к целому числу
+# user_numbers = [int(number) for number in user_numbers.split()]
+#
+# # Сортируем номера пользователя по возрастанию
+# user_numbers.sort()
+#
+# # Проверяем, совпадают ли номера пользователя с сгенерированными номерами
+# if user_numbers == numbers:
+#     print("Поздравляем! Вы выиграли главный приз!")
+# else:
+#     print("К сожалению, вы не выиграли. Попробуйте еще раз.")
