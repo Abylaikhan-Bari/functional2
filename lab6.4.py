@@ -1,18 +1,23 @@
-# Создание списка с названиями категорий расходов
-categories = ['Транспорт', 'Обед', 'Продукты', 'Развлечения', 'Прочее']
+# Общий объем расходов. Разработайте программу, которая подсчитает ваши расходы за каждый день недели.
+# Расходы по следующим категориям (транспортные расходы, обед, и т.д.) Суммы должны быть сохранены в списке.
+# Примените цикл, чтобы вычислить общий объем расходов за неделю и показать результат.
 
-# Создание списка списков для хранения расходов за каждый день недели
+
+# Kategorialar tizimi
+categories = ['Kolik', 'Tuski as', 'Azyq-tulik', 'Oiyn-sauyq', 'Basqa narseler']
+
+# Shygyndar tizimi
 expenses = [[] for _ in range(7)]
 
-# Ввод расходов за каждый день недели
+# Aptanyn ar kunine shygyndardy engizu
 for i in range(7):
-    print("Расходы за день", i+1)
+    print("Bir kundik shygyn", i+1)
     for j in range(len(categories)):
         expense = float(input(categories[j] + ": "))
         expenses[i].append(expense)
 
-# Вычисление общего объема расходов за неделю
+# Bir apta boiynsha jalpy shygyndy esepteu
 total_expenses = sum([sum(expenses[i]) for i in range(7)])
 
-# Вывод результатов
-print("Общий объем расходов за неделю: ", total_expenses)
+# Natijeni shygaru
+print("Bir apta boiynsha shygyndar: ", total_expenses)

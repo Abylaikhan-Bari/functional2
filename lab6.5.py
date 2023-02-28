@@ -1,9 +1,14 @@
-# Ввод имен студентов в одну строку через пробел
-students_str = input("Введите имена студентов через пробел: ")
+# Вводятся имена студентов в одну строчку через пробел. На их основе формируется кортеж.
+# Отобразите на экране все имена из этого кортежа, которые содержат фрагмент "ва". Имена выводятся в одну строку через пробел.
 
-# Создание кортежа из введенных имен
+
+
+# Studentterdin atyn engizu
+students_str = input("Bos oryn arqyly studentterdin attaryn engiziniz: ")
+
+# Engizilgen attardan kortej jasau
 students_tuple = tuple(students_str.split())
 
-# Вывод всех имен из кортежа, содержащих фрагмент "ва"
+# "ва" bar barlyq attardy shygaru
 va_names = [name for name in students_tuple if "ва" in name]
-print("Имена, содержащие фрагмент 'ва':", " ".join(va_names))
+print("Esiminde 'ва' bar barlyq studentter:", " ".join(va_names), "\n")

@@ -1,36 +1,39 @@
-# Функция, которая создает и возвращает кортеж из заданных элементов
+# Кортежмен (tuple) жəне жиындармен (Set) жұмыс істеу үшін кемінде 5 функцияны қолданып программа жазыңыз.
+
+
+# Belgilengen elementterden tuple (kortej) jasap, sony qaitaratyn funksia
 def create_tuple(*elements):
     return tuple(elements)
 
-# Функция, которая объединяет два кортежа и возвращает новый кортеж
+#Eki kortejdi biriktirip, jana kortej qaitaratyn funksia
 def merge_tuples(tuple1, tuple2):
     return tuple1 + tuple2
 
-# Функция, которая создает и возвращает множество из заданных элементов
+#Belgilengen elementterden jiyn jasap, sony qaitaratyn funksia
 def create_set(*elements):
     return set(elements)
 
-# Функция, которая объединяет два множества и возвращает новое множество
+# Eki jiyndy biriktirip jana jiyn jasaityn funksia
 def merge_sets(set1, set2):
     return set1.union(set2)
 
-# Функция, которая находит пересечение двух множеств и возвращает новое множество
+#Eki jiynnyn qiylysyn tauyp, jana jiyn qaitaratyn funksia
 def find_intersection(set1, set2):
     return set1.intersection(set2)
 
-# Пример использования функций
+# Funksialardy qoldanu
 tuple1 = create_tuple(1, 2, 3)
 tuple2 = create_tuple(4, 5, 6)
-print("Кортеж 1:", tuple1)
-print("Кортеж 2:", tuple2)
+print("Tuple 1:", tuple1)
+print("Tuple 2:", tuple2)
 merged_tuple = merge_tuples(tuple1, tuple2)
-print("Объединенный кортеж:", merged_tuple)
+print("Biriktirilgen tuple:", merged_tuple)
 
 set1 = create_set(1, 2, 3)
 set2 = create_set(3, 4, 5)
-print("Множество 1:", set1)
-print("Множество 2:", set2)
+print("Set 1:", set1)
+print("Set 2:", set2)
 merged_set = merge_sets(set1, set2)
-print("Объединенное множество:", merged_set)
+print("Biriktirilgen set:", merged_set)
 intersection = find_intersection(set1, set2)
-print("Пересечение множеств:", intersection)
+print("Jiyndardyn qilysuy:", intersection)
