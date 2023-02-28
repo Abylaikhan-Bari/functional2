@@ -3,21 +3,29 @@
 # Примените цикл, чтобы вычислить общий объем расходов за неделю и показать результат.
 
 
-# Kategorialar tizimi
-categories = ['Kolik', 'Tuski as', 'Azyq-tulik', 'Oiyn-sauyq', 'Basqa narseler']
+# Создаем пустой словарь для расходов
+expenses = {}
 
-# Shygyndar tizimi
-expenses = [[] for _ in range(7)]
+# Создаем список дней недели
+weekdays = ['Duisenbi', 'Seisenbi', 'Sarsenbi', 'Beisenbi', 'Juma', 'Senbi', 'Jeksenbi']
 
-# Aptanyn ar kunine shygyndardy engizu
-for i in range(7):
-    print("Bir kundik shygyn", i+1)
-    for j in range(len(categories)):
-        expense = float(input(categories[j] + ": "))
-        expenses[i].append(expense)
+# Просим пользователя ввести расходы за каждый день недели
+for day in weekdays:
+    expenses[day] = {}
+    print(f'{day} kunnin shygyny :')
+    expenses[day]['kolik'] = float(input('Kolik: '))
+    expenses[day]['tagam'] = float(input('Tuski as: '))
+    expenses[day]['oiyn-sauyq'] = float(input('Oiyn-sauyq: '))
 
-# Bir apta boiynsha jalpy shygyndy esepteu
-total_expenses = sum([sum(expenses[i]) for i in range(7)])
+# Вычисляем общую сумму за неделю
+total_expenses = 0
+for day in expenses:
+    total_expenses += sum(expenses[day].values())
 
-# Natijeni shygaru
-print("Bir apta boiynsha shygyndar: ", total_expenses)
+# Выводим результат
+print('\nBir aptanyn shygyny:')
+for day in expenses:
+    print(f'{day}: {sum(expenses[day].values())} tenge.')
+
+print("\n")
+print(f'Jalpy apta shygyny: {total_expenses} tenge.')

@@ -10,7 +10,7 @@ def fill_tuple(size, min_num, max_num):
 
 # kortejderdi tolrtyru
 tuple1 = fill_tuple(10, 0, 5)
-tuple2 = fill_tuple(5, -5, 0)
+tuple2 = fill_tuple(10, -5, 0)
 
 # Kortejderdi biriktiru
 tuple3 = tuple1 + tuple2

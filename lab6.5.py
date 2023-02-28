@@ -11,4 +11,4 @@ students_tuple = tuple(students_str.split())
 
 # "ва" bar barlyq attardy shygaru
 va_names = [name for name in students_tuple if "ва" in name]
-print("Esiminde 'ва' bar barlyq studentter:", " ".join(va_names), "\n")
+print("Esiminde 'ва' bar barlyq studentter:", " ".join(va_names))
