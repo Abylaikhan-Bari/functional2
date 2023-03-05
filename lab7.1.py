@@ -1,36 +1,32 @@
 # Сөздіктерге байланысты 5 функция немесе əдістерді қолданып
 # бағдарлама жазу қажет.
 
-# Создание пустого словаря
-my_dict = {}
+# Bos sozdik jasau
+students = {}
 
-# Добавление элементов в словарь
-my_dict["apple"] = 2
-my_dict["banana"] = 4
-my_dict["orange"] = 1
+# update() adisin qoldanyp birneshe jana element qosamyz
+students.update({"John": 21, "Alice": 19})
+students.update({"Bob": 20, "Mary": 22})
+students.update({"Mike": 23, "Alex": 25})
 
-# Получение значения по ключу
-print("У меня есть", my_dict["apple"], "яблок")
+#keys() adisimen sozdiktin kiltterin shygaramyz
+print("Sozdiktin kiltteri:")
+print(*students.keys())
 
-# Удаление элемента из словаря по ключу
-del my_dict["orange"]
+# values() adisimen sozdik manderin shygaramyz
+print("Sozdiktin manderi:")
+print(*students.values())
 
-# Проверка наличия ключа в словаре
-if "banana" in my_dict:
-    print("У меня есть", my_dict["banana"], "бананов")
+# items() adisimen sozdiktin elementterin shygaru
+print("Sozdiktin elementteri:")
+print(*students.items())
 
-# Получение списка ключей и значений из словаря
-keys = list(my_dict.keys())
-values = list(my_dict.values())
+# update() adisimen elementtin manin ozgertemiz
+students.update({"Alice": 20})
 
-print("В моем холодильнике есть:")
-for i in range(len(keys)):
-    print(keys[i], "-", values[i])
+#pop() adisimen elementti joiamyz
+students.pop("Bob")
 
-# Обновление словаря с помощью другого словаря
-new_dict = {"grape": 3, "pear": 2}
-my_dict.update(new_dict)
-
-print("После похода в магазин в моем холодильнике есть:")
-for key, value in my_dict.items():
-    print(key, "-", value)
+# Natizheni shygaru
+print("Natizhe:")
+print(*students.items())
