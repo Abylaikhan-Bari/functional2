@@ -1,6 +1,12 @@
 # Сөздіктерге байланысты 5 функция немесе əдістерді қолданып
 # бағдарлама жазу қажет.
 
+#
+# Dictionaries are used to store data values in "key:value" pairs.
+#
+# A dictionary is a collection which is ordered*, changeable and do not allow duplicates.
+
+
 # Bos sozdik jasau
 students = {}
 
@@ -26,7 +32,7 @@ y = 0
 
 thisdict = dict.fromkeys(x, y)
 
-print('Killter: ',thisdict)
+print('Sozdik: ', thisdict)
 
 # update() adisimen elementtin manin ozgertemiz
 students.update({"Alice": 20})
