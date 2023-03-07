@@ -10,7 +10,7 @@
 comments = {}
 
 while True:
-    line = input("Kommetari engiziniz (toqtau ushin bos jol): ")
+    line = input("Kommentari engiziniz (esimi: komentarii) (toqtau ushin bos jol): ")
     if line == "":
         break
     name, comment = line.split(": ")

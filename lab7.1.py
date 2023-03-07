@@ -21,6 +21,13 @@ print(*students.values())
 print("Sozdiktin elementteri:")
 print(*students.items())
 
+x = ('key1', 'key2', 'key3')
+y = 0
+
+thisdict = dict.fromkeys(x, y)
+
+print('Killter: ',thisdict)
+
 # update() adisimen elementtin manin ozgertemiz
 students.update({"Alice": 20})
 
